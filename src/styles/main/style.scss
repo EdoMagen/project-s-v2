@@ -1,0 +1,298 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,700,300);
+@import '../foundation/foundation.scss';
+@import '../foundation/settings.scss';
+
+@font-face {
+    font-family: 'icomoon';
+    src:
+        url('./icons/icomoon.ttf') format('truetype'),
+        url('./icons/icomoon.woff') format('woff'),
+        url('./icons/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    //font-size:32px;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* set variables */
+.loading {
+  pointer-events: none;
+}
+/* less.css custom mixins */
+/* create a niue blur effect */
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: middle;
+  /*was baseline*/
+  background: transparent;
+}
+html {
+  height: 100%;
+}
+body {
+  line-height: 1;
+  font-family: arial;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+  width: 100%;
+}
+button {
+  border: 0px;
+  outline: 0;
+}
+a {
+  text-decoration: none;
+}
+li,
+ul {
+  list-style: none;
+}
+* {
+  -webkit-text-size-adjust: none;
+  /* prevent padding to add size */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input,
+textarea,
+select {
+  outline: none;
+}
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+textarea {
+  resize: none;
+}
+body strong {
+  font-weight: bold;
+  font-size: 0.8em;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  /* display: inline-block;*/
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+a {
+  color: #0d0d0d;
+}
+a:active,
+a:hover {
+  color: #000;
+}
+a.active {
+  font-weight: bold;
+}
+body {
+  font-size: 14px;
+  font-weight: 300;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body, body * {
+  font-family: 'Oxygen', arial;
+  font-weight: 300;
+}
+body, html, #root, .page-wrapper {
+  position: relative;
+  min-height: 100%;
+}
+.page-wrapper {
+  //padding: 0 0 150px; /* bottom = footer height + 50px padding */
+  height: 100%;
+}
+
+body.direction-rtl .block,
+body.direction-rtl input,
+body.direction-rtl label,
+body.direction-rtl button,
+body.direction-rtl h3 {
+  direction: rtl;
+}
+body.direction-rtl label {
+  text-align: right;
+}
+body.direction-rtl .locale-text-align {
+  text-align: right;
+}
+body.direction-ltr .locale-text-align {
+  text-align: left;
+}

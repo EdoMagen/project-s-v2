@@ -1,0 +1,45 @@
+Logical Design
+
+
+
+Pages:
+
+	MainDashboard
+		- Components:
+			-Tutorial
+			-Header	
+			-HourBar
+			-ShowList
+				-ShowItem
+				-
+			-Footer
+	
+	PrintMaterials
+		- Components:
+			-Header
+			-TemplateList
+				-TemplateItem	
+	
+	
+	EditShow
+		- Components:
+			-Header
+			-HashtagField
+			-SourcesToggles
+			-AnimationChooser
+			-SaveCancelButtons		
+
+	CreateShow
+		- Components:
+			-Header
+			-HashtagField
+			-SourcesToggles
+			-AnimationChooser
+			-SaveCancelButtons			
+
+	Show
+		- Components:
+
+	Peek
+		- Components:
+
