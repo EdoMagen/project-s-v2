@@ -66,9 +66,6 @@ App.childContextTypes = {
 // Render app
 render(<App/>, document.getElementById('root'))
 
-
-
-
 /** stickyfooter.js */
 
 
