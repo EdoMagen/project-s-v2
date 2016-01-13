@@ -35,6 +35,35 @@ export default class ShowItem extends Component {
      }, 3000);
   }
 
+/*
+Attempting to show loader while download is in progress
+-------------------------------------------------------
+  renderDownloadButton() {
+    let dlButton = null;
+    if(!this.state.isDownloading){
+      dlButton = <FontIcon>
+                    <IconButton
+                      iconClassName="icon icon-download"
+                      tooltip="Download"
+                      tooltipPosition="bottom-right"
+                      onClick={this.downloadContent.bind(this)}/>
+                 </FontIcon>
+    }
+    else{
+      dlButton = <FontIcon>
+                    <CircularProgress mode="indeterminate"
+                      style={{
+                        margin: 'auto 5px',
+                        display: 'inline-block',
+                        width: '60px',
+                        height:'60px'
+                      }} />
+                 </FontIcon>
+    }
+    return dlButton;
+  }
+*/
+
   // Render component
   render() {
     console.log('ShowItem was rendered');
@@ -59,7 +88,7 @@ export default class ShowItem extends Component {
               <div className="row">
                 {/*Left part*/}
                 <div className="large-2 medium-12 columns">
-                  <ToolbarGroup firstChild={true} style={{'margin':0,'width':'100%'}}>
+                  <ToolbarGroup firstChild={true} style={{paddingLeft: '.3em', 'margin':0,'width':'100%'}}>
                     <Link to={`/edit/${data.id}`} style={{'float':'right','marginRight':5}}>
                       <FontIcon style={iconStyles}>
                         <IconButton style={iconButtonStyles}
@@ -88,7 +117,7 @@ export default class ShowItem extends Component {
                 </div>
                 {/*Right part*/}
                 <div className="large-4 medium-12 columns actionbar">
-                  <ToolbarGroup>
+                  <ToolbarGroup style={{ paddingRight: '1.1em' }}>
                     <Link to={`/show/${data.id}`}>
                       <FontIcon style={iconStyles}>
                         <IconButton style={iconButtonStyles}

@@ -48,6 +48,9 @@ $icon-hover-color: $primary-color;
         line-height: 70px;
         transition: all 150ms ease-in-out;
     }
+    span {
+      color: $white;
+    }
   }
   button:hover {
     .icon:before {
