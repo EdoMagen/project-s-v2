@@ -3,7 +3,36 @@
 $icon-color: $medium-gray;
 $icon-hover-color: $primary-color;
 
+.print-table  {
+  margin-top:25px;
+  ul {
+    background-color: #eee;
+    border:1px solid $medium-gray;
+    padding:1em 1.5em;
+  }
+  .title {
+    font-size:2em;
+  }
+  .size {
+    color: $dark-gray;
+  }
+  .description {
+    margin: 0.5em 0 2.5em 0;
+    height: 2em;
+  }
+  .bullet.image {
+    text-align: center;
+  }
+  .secondary-cta {
+    text-align: center;
+    margin: 30px 0 15px 0;
+  }
 
+  .cta {
+    text-align: center;
+    margin-bottom:15px;
+  }
+}
 
 
 // Medium screens

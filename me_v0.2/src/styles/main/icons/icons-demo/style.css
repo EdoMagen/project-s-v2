@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'icomoon';
     src:
-        url('fonts/icomoon.ttf?dksd2h') format('truetype'),
-        url('fonts/icomoon.woff?dksd2h') format('woff'),
-        url('fonts/icomoon.svg?dksd2h#icomoon') format('svg');
+        url('fonts/icomoon.ttf?akj7vi') format('truetype'),
+        url('fonts/icomoon.woff?akj7vi') format('woff'),
+        url('fonts/icomoon.svg?akj7vi#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -74,6 +74,9 @@
 .icon-cloud:before {
     content: "\e910";
 }
+.icon-controller-play:before {
+    content: "\e965";
+}
 .icon-dot-single:before {
     content: "\e911";
 }
@@ -113,8 +116,14 @@
 .icon-triangle-up:before {
     content: "\e91a";
 }
+.icon-beamed-note:before {
+    content: "\e966";
+}
 .icon-box:before {
     content: "\e91b";
+}
+.icon-camera:before {
+    content: "\e967";
 }
 .icon-circle-with-cross:before {
     content: "\e91c";
@@ -179,6 +188,9 @@
 .icon-home:before {
     content: "\e92f";
 }
+.icon-image-inverted:before {
+    content: "\e968";
+}
 .icon-image:before {
     content: "\e930";
 }
@@ -205,6 +217,12 @@
 }
 .icon-list:before {
     content: "\e938";
+}
+.icon-location-pin:before {
+    content: "\e969";
+}
+.icon-location:before {
+    content: "\e96a";
 }
 .icon-mail:before {
     content: "\e939";
@@ -259,6 +277,9 @@
 }
 .icon-thumbs-up:before {
     content: "\e949";
+}
+.icon-tv:before {
+    content: "\e96b";
 }
 .icon-user:before {
     content: "\e94a";

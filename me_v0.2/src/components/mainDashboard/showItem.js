@@ -14,6 +14,7 @@ export default class ShowItem extends Component {
       isLoading: false,
       showData: props.data
     };
+    var theState = this.state;
     /* Autobind methods - might check this out
       this.deleteSlide = this.deleteSlide.bind(this);
       this.downloadContent = this.downloadContent.bind(this);
@@ -26,7 +27,12 @@ export default class ShowItem extends Component {
   }
 
   downloadContent(id, slideshow) {
-    console.log(id + ' downloaded')
+    let state = this.state;
+    state.isLoading = true;
+    setTimeout(function(){
+      state.isLoading = false;
+      console.log(id + ' downloaded');
+     }, 3000);
   }
 
   // Render component
@@ -75,9 +81,9 @@ export default class ShowItem extends Component {
                 <div style={{lineHeight:'1.5em'}} className="large-6 medium-12 columns">
                   <div className="tag-details">
                     <h3>#{data.hashtag}</h3>
-                    <span> Tweets: {data.tweetCount} </span>
-                    <span> Photos: {data.photoCount} </span>
-                    <span> Videos: {data.videoCount} </span>
+                    <span className="dspan first"><i className="icon icon-twitter"></i> Tweets: {data.tweetCount} </span>
+                    <span className="dspan"><i className="icon icon-camera"></i> Photos: {data.photoCount} </span>
+                    <span className="dspan"><i className="icon icon-video"></i> Videos: {data.videoCount} </span>
                   </div>
                 </div>
                 {/*Right part*/}
@@ -101,16 +107,15 @@ export default class ShowItem extends Component {
                     </Link>
                     <FontIcon style={iconStyles}>
                       <IconButton style={iconButtonStyles}
-                        iconClassName="icon icon-install"
+                        iconClassName="icon icon-download"
                         tooltip="Download"
                         tooltipPosition="bottom-right"
                         onClick={this.downloadContent.bind(this, data.id)}/>
                     </FontIcon>
-
                     <Link to={`/show/${data.id}`}>
                       <FontIcon style={iconStyles}>
                         <IconButton style={iconButtonStyles}
-                          iconClassName="icon icon-youtube"
+                          iconClassName="icon icon-controller-play"
                           tooltip="Play slideshow"
                           tooltipPosition="bottom-right"/>
                       </FontIcon>

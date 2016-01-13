@@ -18,7 +18,6 @@ export default class Routes extends Component {
 
   render() {
     console.log('Routes was rendered');
-    debugger;
     return(
   		<Router history={createHistory()}>
   			<Route name='Dashboard'       path='/'              component={MainDashboard}/>

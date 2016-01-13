@@ -7,9 +7,26 @@ $icon-hover-color: $primary-color;
 .get-hours-button-container {
   text-align: right;
 }
-
-
+.tag-details {
+  margin-bottom: .7em;
+}
 .showitem {
+  .dspan {
+    color: darken($icon-color,40%);
+    &.first i {
+      margin-left: 0;
+    }
+  }
+  i {
+    margin:0 .2em 0 1em;
+    &:before {
+      color: $icon-color;
+    }
+  }
+  h3 {
+    margin-bottom:0;
+  }
+
   .fonticon {
     padding:0;
   }
@@ -23,7 +40,7 @@ $icon-hover-color: $primary-color;
     width:70px;
   }
   button {
-     //width:70px !important;
+    //width:70px !important;
     // height:70px;
     margin-left: 5px;
     .icon:before {
@@ -38,6 +55,9 @@ $icon-hover-color: $primary-color;
     }
     .icon-trash:before {
         color: $alert-color;
+    }
+    .icon-cog:before {
+      transform:rotate(-45deg);
     }
   }
 }
@@ -70,10 +90,13 @@ $icon-hover-color: $primary-color;
   .showitem {
     button {
       width: 65px !important;
-  }
-  .tag-details {
-    padding-left:.5em;
-  }
+    }
+    .tag-details {
+      padding-left:.5em;
+    }
+    .dspan {
+      font-size: 0.9em;
+    }
 }
 
 } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
