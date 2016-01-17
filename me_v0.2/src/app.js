@@ -46,6 +46,7 @@ export default class App extends Component {
   }
 
   render () {
+    //debugger;
     return (
       <div id="page-wrapper" className="page-wrapper">
         <Header currentRoute={this.state.currentRoute} />

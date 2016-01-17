@@ -51,9 +51,10 @@ $(window).bind("load", function() {
        positionFooter();
        function positionFooter() {
          let contentHeight = $('header').height()+$("#currentScreen").height()+$('footer').height();
+         let neededMargin = $(window).height()-$('header').height()-$("#currentScreen").height()-$('footer').height()-50;
          (contentHeight+80 <= $(window).height())
-           ? $('footer').css('position','fixed')
-           : $('footer').css('position', 'relative')
+           ? $('footer').css('position','fixed') /*$('footer').css('margin-top',neededMargin+'px')*/
+           : $('footer').css('position', 'relative') /*$('footer').css('margin-top',neededMargin+'px')*/
        }
        $(window)
                .scroll(positionFooter)

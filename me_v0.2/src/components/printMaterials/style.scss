@@ -3,6 +3,9 @@
 $icon-color: $medium-gray;
 $icon-hover-color: $primary-color;
 
+.printmaterials-wrapper {
+  margin-bottom:5em;
+}
 .print-table  {
   margin-top:25px;
   ul {
@@ -17,8 +20,9 @@ $icon-hover-color: $primary-color;
     color: $dark-gray;
   }
   .description {
-    margin: 0.5em 0 2.5em 0;
-    height: 2em;
+    margin: 0.5em 0 1em 0;
+    min-height: 3em;
+    font-size: 1.1em;
   }
   .bullet.image {
     text-align: center;
