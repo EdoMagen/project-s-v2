@@ -7,13 +7,6 @@ promise.polyfill();
 import icons from './styles/main/icons.scss'
 import style from './styles/main/style.scss'
 
-// Import Material-UI
-import theme from './styles/material-theme/theme'
-import ThemeManager from 'material-ui/lib/styles/theme-manager'
-import ThemeDecorator from 'material-ui/lib/styles/theme-decorator'
-import injectTapEventPlugin from 'react-tap-event-plugin'
-injectTapEventPlugin();
-
 // Import dependencies
 import Fetch from './utils/fetch/fetch'
 
@@ -24,48 +17,11 @@ import LanguageApi from './api/language-api'
 import ConfigApi from './api/config-api'
 
 // Import components to render in App
-import Routes from './routes'
-import Header from './components/generalComponents/header'
-import Footer from './components/generalComponents/footer'
-
-// App
-export default class App extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentRoute : "Dashboard"
-    };
-  }
-
-  getChildContext() {
-    return {
-      muiTheme: ThemeManager.getMuiTheme(theme),
-    };
-  }
-
-  render () {
-    //debugger;
-    return (
-      <div id="page-wrapper" className="page-wrapper">
-        <Header currentRoute={this.state.currentRoute} />
-        <div id="currentScreen">
-            <Routes/>
-        </div>
-        <Footer/>
-      </div>
-    );
-  }
-}
-
-// For Material-UI
-App.childContextTypes = {
-    muiTheme: React.PropTypes.object
-};
+//import App from './components/app'
+import Routes from './routes';
 
 // Render app
-render(<App/>, document.getElementById('root'))
+render(<Routes/>, document.getElementById('root'))
 
 
 

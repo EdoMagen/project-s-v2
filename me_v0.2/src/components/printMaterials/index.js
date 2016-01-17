@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { RaisedButton, FontIcon } from 'material-ui';
-import Breadcrumbs from 'react-breadcrumbs'
 import style from './style.scss';
 
 export default class printMaterials extends Component {
@@ -32,7 +31,6 @@ export default class printMaterials extends Component {
     console.log('printMaterials was rendered');
     return(
       <div className="row printmaterials-wrapper large-centered" data-equalizer>
-        <Breadcrumbs routes={this.props.routes} params={this.props.params}/>
         <h1>Choose template</h1>
       	<div className="large-4 medium-4 columns print-table">
           <ul className="print-table-ul">
