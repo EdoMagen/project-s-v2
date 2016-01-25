@@ -12,10 +12,12 @@ export default class ShowItem extends Component {
     super();
     this.state = {
       isLoading: false,
+      isDownloading: false,
       showData: props.data
     };
-    var theState = this.state;
-    /* Autobind methods - might check this out
+    /*
+    Autobind methods - might check this out
+    ---------------------------------------
       this.deleteSlide = this.deleteSlide.bind(this);
       this.downloadContent = this.downloadContent.bind(this);
     */
@@ -27,10 +29,10 @@ export default class ShowItem extends Component {
   }
 
   downloadContent(id, slideshow) {
-    let state = this.state;
-    state.isLoading = true;
+    this.setState({isLoading: true});
+    console.log(id + ' downloading...');
+    this.setState({isLoading: false});
     setTimeout(function(){
-      state.isLoading = false;
       console.log(id + ' downloaded');
      }, 3000);
   }
@@ -38,7 +40,8 @@ export default class ShowItem extends Component {
 /*
 Attempting to show loader while download is in progress
 -------------------------------------------------------
-  renderDownloadButton() {
+
+renderDownloadButton() {
     let dlButton = null;
     if(!this.state.isDownloading){
       dlButton = <FontIcon>
@@ -62,6 +65,7 @@ Attempting to show loader while download is in progress
     }
     return dlButton;
   }
+
 */
 
   // Render component

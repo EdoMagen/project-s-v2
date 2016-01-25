@@ -21,16 +21,17 @@ export default class Routes extends Component {
     console.log('Routes was rendered');
     return(
   		<Router history={createHistory()}>
-      <Route name='Main'                path='/'               component={App}>
-          <IndexRoute                                          component={MainDashboard}/>
-    			<Route name='Dashboard'       path='/'               component={MainDashboard}/>
-          <Route name='Print Materials' path='/print/:showId'  component={PrintMaterials}/>
-          <Route name='Create'          path='/create'         component={ShowEditor} />
-    			<Route name='Edit'            path='/edit/:showId'   component={ShowEditor} />
-    			<Route name='Show'            path='/show/:showId'   component={Show} />
-    			<Route name='Peek'            path='/peek/:showId'   component={Show} />
+        <Route name='Main'                path='/'               component={App}>
+          <IndexRoute  name='Dashboard'                        component={MainDashboard}/>
+    			{/*<Route name='Dashboard'       path='/'               component={MainDashboard}/>*/}
+          <Route name='Print Materials' path='print/:showId'  component={PrintMaterials}>
+            <Redirect from="print" to="/" />
+          </Route>
+          <Route name='Create'          path='create'         component={ShowEditor} />
+    			<Route name='Edit'            path='edit/:showId'   component={ShowEditor} />
+    			<Route name='Show'            path='show/:showId'   component={Show} />
+    			<Route name='Peek'            path='peek/:showId'   component={Show} />
     			<Route name='404'             path='*'               component={NotFound} />
-        <Redirect from="print" to="/" />
         </Route>
   		</Router>
   	);

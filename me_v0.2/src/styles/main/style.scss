@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Oxygen:400,700,300);
+//@import url(https://fonts.googleapis.com/css?family=Oxygen:400,700,300);
 @import '../foundation/foundation.scss';
 @import '../foundation/settings.scss';
 
@@ -295,4 +295,8 @@ body.direction-rtl .locale-text-align {
 }
 body.direction-ltr .locale-text-align {
   text-align: left;
+}
+
+#currentScreen {
+  min-height:600px;
 }

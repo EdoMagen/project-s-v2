@@ -10,14 +10,13 @@ import style from './styles/main/style.scss'
 // Import dependencies
 import Fetch from './utils/fetch/fetch'
 
-// Import API handlers
-import RegFormApi from './api/reg-form-api'
-import LocationApi from './api/location-api'
-import LanguageApi from './api/language-api'
-import ConfigApi from './api/config-api'
+// Import API handlers - currently unnecessary but good to learn from
+// import RegFormApi from './api/reg-form-api'
+// import LocationApi from './api/location-api'
+// import LanguageApi from './api/language-api'
+// import ConfigApi from './api/config-api'
 
-// Import components to render in App
-//import App from './components/app'
+// Import routes to render
 import Routes from './routes';
 
 // Render app

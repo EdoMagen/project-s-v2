@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import style from './header.scss';
-import icons from '../../styles/main/icons.scss';
-import Nav from './nav';
+import icons from '../../../styles/main/icons.scss';
+import Nav from '../nav';
 
 export default class Header extends Component {
   constructor(props) {

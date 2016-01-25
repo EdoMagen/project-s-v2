@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import style from './footer.scss';
-import icons from '../../styles/main/icons.scss';
+import icons from '../../../styles/main/icons.scss';
 
 export default class Footer extends Component {
   constructor(props) {
@@ -46,6 +46,8 @@ export default class Footer extends Component {
   }
 }
 
+
+
 // Sticky footer
 $(window).bind("load", function() {
        positionFooter();
@@ -53,8 +55,8 @@ $(window).bind("load", function() {
          let contentHeight = $('header').height()+$("#currentScreen").height()+$('footer').height();
          let neededMargin = $(window).height()-$('header').height()-$("#currentScreen").height()-$('footer').height()-50;
          (contentHeight+80 <= $(window).height())
-           ? $('footer').css('position','fixed') /*$('footer').css('margin-top',neededMargin+'px')*/
-           : $('footer').css('position', 'relative') /*$('footer').css('margin-top',neededMargin+'px')*/
+           ? $('footer').css('position','fixed')
+           : $('footer').css('position', 'relative')
        }
        $(window)
                .scroll(positionFooter)
