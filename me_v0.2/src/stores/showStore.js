@@ -7,18 +7,18 @@ import _ from 'lodash';
 
 
 
-class LocationStore {
+class ShowStore {
   constructor() {
-    this.locations = [];
+    this.Shows = [];
 
     this.bindListeners({
-      handleUpdateLocations: Actions.UPDATE_LOCATIONS
+      handleUpdateShows: Actions.UPDATE_SHOWS
     });
   }
 
-  handleUpdateLocations(locations) {
-    this.locations = locations;
+  handleUpdateShows(Shows) {
+    this.Shows = Shows;
   }
 }
 
-module.exports = alt.createStore(LocationStore, 'LocationStore');
+module.exports = alt.createStore(ShowStore, 'ShowStore');

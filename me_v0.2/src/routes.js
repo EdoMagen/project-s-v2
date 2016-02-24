@@ -25,7 +25,7 @@ export default class Routes extends Component {
           <IndexRoute  name='Dashboard'                        component={MainDashboard}/>
     			{/*<Route name='Dashboard'       path='/'               component={MainDashboard}/>*/}
           <Route name='Print Materials' path='print/:showId'  component={PrintMaterials}>
-            <Redirect from="print" to="/" />
+            <Redirect from="/print" to="/" />
           </Route>
           <Route name='Create'          path='create'         component={ShowEditor} />
     			<Route name='Edit'            path='edit/:showId'   component={ShowEditor} />

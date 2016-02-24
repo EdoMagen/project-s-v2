@@ -17,6 +17,9 @@ import ThemeManager from 'material-ui/lib/styles/theme-manager'
 import ThemeDecorator from 'material-ui/lib/styles/theme-decorator'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin();
+/* is this even needed?
+  React.initializeTouchEvents(true)
+*/
 
 // App
 export default class App extends Component {
