@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Card, CardHeader, CardText, CardActions,
          FlatButton, Toggle, Snackbar } from 'material-ui';
 import style from './style.scss';
-import Shows from '../../api/slideshows/showData';
+import Shows from '../../api/slideshows/dashboardData';
 
 export default class showEditor extends Component {
   constructor(props) {
@@ -22,6 +22,7 @@ export default class showEditor extends Component {
   componentDidMount() {
     $(window).trigger('resize');
     console.log('resize event fired');
+    console.log(Shows);
 
     // WHY ARENT THESE WORKING???
     this.getShow = this.getShow.bind(this);
@@ -35,12 +36,12 @@ export default class showEditor extends Component {
 
   initScreen() {
     // Assumes that currentShow already exists
-    this.refs.instagramToggle.setToggled(this.state.currentShow.useInstagram);
-    this.refs.twitterToggle.setToggled(this.state.currentShow.useTwitter);
+    this.refs.instagramToggle.setToggled(this.state.currentShow.use_instagram);
+    this.refs.twitterToggle.setToggled(this.state.currentShow.use_twitter);
 
     this.setState({
-                    shouldUseInstagram: this.state.currentShow.useInstagram,
-                    shouldUseTwitter: this.state.currentShow.useTwitter
+                    shouldUseInstagram: this.state.currentShow.use_instagram,
+                    shouldUseTwitter: this.state.currentShow.use_twitter
                   });
 
     // ... continue to init layouts according to currentShow
@@ -68,8 +69,8 @@ export default class showEditor extends Component {
       this.state.currentShow = {
   			id: "",
   			hashtag: "",
-        useInstagram: true,
-        useTwitter: true,
+        use_instagram: true,
+        use_twitter: true,
   			headerImage: "/dist/default.jpg",
   			bgImage: "/dist/default.jpg",
   			customText: "Tag your instagram posts with <span class='hashtag'>#hashtag</span> to add them to the slideshow",
@@ -106,7 +107,7 @@ export default class showEditor extends Component {
     // Force at least 1 social network
     setTimeout(
       () => {
-            if(!this.state.shouldUseInstagram && !this.state.shouldUseTwitter) {
+            if(!this.state.shouldUseInstagram && !this.state.shoulduse_twitter) {
               this.refs.instagramToggle.setToggled(true);
               this.setState({
                               shouldUseInstagram: true,
@@ -131,7 +132,7 @@ export default class showEditor extends Component {
       {data.showId}
         <Card>
           <CardHeader
-            title="My Awesome Slideshow"
+            title={show.hashtag}
             subtitle="Subtitle" />
           <CardText>
             <div className="row">

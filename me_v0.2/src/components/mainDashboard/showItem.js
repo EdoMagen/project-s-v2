@@ -103,9 +103,9 @@ export default class ShowItem extends Component {
                   <div style={{lineHeight:'1.5em'}} className="large-6 medium-12 columns">
                     <div className="tag-details">
                       <h3><Link to={`/edit/${data.id}`}>#{data.hashtag}</Link></h3>
-                      <span className="dspan first"><i className="icon icon-twitter"></i> Tweets: {data.tweetCount} </span>
-                      <span className="dspan"><i className="icon icon-camera"></i> Photos: {data.photoCount} </span>
-                      <span className="dspan"><i className="icon icon-video"></i> Videos: {data.videoCount} </span>
+                      <span className="dspan first"><i className="icon icon-twitter"></i> Tweets: {data.tweet_count} </span>
+                      <span className="dspan"><i className="icon icon-camera"></i> Photos: {data.photo_count} </span>
+                      <span className="dspan"><i className="icon icon-video"></i> Videos: {data.video_count} </span>
                     </div>
                   </div>
                   {/*Right part*/}

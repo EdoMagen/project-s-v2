@@ -5,7 +5,6 @@ import { Avatar, Card, CircularProgress,
         CardText, FlatButton } from 'material-ui';
 import ShowItem from './showItem';
 
-import Shows from '../../api/slideshows/showData';
 import _ from 'lodash';
 
 export default class ShowList extends Component {
@@ -13,7 +12,7 @@ export default class ShowList extends Component {
     super();
     this.state = {
       isLoading: false,
-      shows: Shows
+      shows: props.shows
     };
   }
 

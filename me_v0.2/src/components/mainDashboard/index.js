@@ -3,18 +3,20 @@ import { RaisedButton, Checkbox } from 'material-ui';
 import HourBar from './hourBar';
 import ShowList from './showList';
 import style from './style.scss';
+import Shows from '../../api/slideshows/dashboardData';
+
 
 export default class MainDashboard extends Component {
   constructor(props) {
     super();
     this.state = {
       isLoading: false,
-      slideshows: {}
+      slideshows: Shows
     };
   }
 componentDidMount() {
     $(window).trigger('resize');
-    console.log('resize event fired')
+    console.log('resize event fired');
 }
   render() {
     console.log('MainDashboard was rendered');
@@ -22,7 +24,7 @@ componentDidMount() {
     <div>
       <HourBar/>
       <br/>
-      <ShowList/>
+      <ShowList shows={this.state.slideshows}/>
     </div>
     );
   }

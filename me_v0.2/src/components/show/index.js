@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-//import { RaisedButton, Checkbox } from 'material-ui';
 import style from './style.scss';
+import Show from '../../api/slideshows/liveshowData';
 
 export default class show extends Component {
   constructor(props) {
     super();
     this.state = {
       isLoading: false,
-      showId: props.params.showId
+      showId: props.params.showId, // taken from the router
     };
   }
 
   componentDidMount() {
     $(window).trigger('resize');
     console.log('resize event fired');
+    console.log(Show);
   }
 
   render() {

@@ -21,14 +21,14 @@ injectTapEventPlugin();
   React.initializeTouchEvents(true)
 */
 
+
 // App
 export default class App extends Component {
 
   constructor(props) {
     super(props);
-
     this.state = {
-      currentRoute : "Dashboard"
+      currentRoute : this.props.routes[1].name
     };
   }
 
@@ -41,18 +41,26 @@ export default class App extends Component {
   render () {
     return (
       <div id="page-wrapper" className="page-wrapper">
-        <Header currentRoute={this.state.currentRoute} />
-        <Breadcrumbs routes={this.props.routes} params={this.props.params} />
+        <Header
+                currentRoute={this.state.currentRoute}
+                display={this.state.currentRoute != "Show"} />
+
+        <Breadcrumbs
+                routes={this.props.routes}
+                params={this.props.params} />
+
         <div id="currentScreen">
           {this.props.children}
         </div>
-        <Footer/>
+
+        <Footer display={this.state.currentRoute != "Show"}/>
       </div>
-    );
+    )
   }
 }
 
+
 // For Material-UI
 App.childContextTypes = {
-    muiTheme: React.PropTypes.object
+  muiTheme: React.PropTypes.object
 };
