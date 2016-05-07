@@ -23,3 +23,20 @@
 
 ## Dashboard
   - Instagram and twitter connection indicators (connected / not connected)
+
+
+
+------------------------------
+
+# Server
+- Check if it's possible to get content by hashtag + location (+radius)
+- Connect to DB (sync about IP)
+- Create REST API for actions (detailed in actionsToServer.js)
+
+# Client
+- Build Show screen
+- Create 5 templates for slideshows
+- Build Create / edit screen
+- Implement Redux for event system
+- Replace HourBar with icon + status (Good, getting low, very low, no more hours)
+-

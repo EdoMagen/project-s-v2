@@ -107,7 +107,8 @@ export default class showEditor extends Component {
     // Force at least 1 social network
     setTimeout(
       () => {
-            if(!this.state.shouldUseInstagram && !this.state.shoulduse_twitter) {
+        //debugger;
+            if(!this.state.shouldUseInstagram && !this.state.shoulduseTwitter) {
               this.refs.instagramToggle.setToggled(true);
               this.setState({
                               shouldUseInstagram: true,
@@ -132,7 +133,7 @@ export default class showEditor extends Component {
       {data.showId}
         <Card>
           <CardHeader
-            title={show.hashtag}
+            title="Title"
             subtitle="Subtitle" />
           <CardText>
             <div className="row">

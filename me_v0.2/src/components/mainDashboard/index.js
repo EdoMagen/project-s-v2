@@ -5,7 +5,6 @@ import ShowList from './showList';
 import style from './style.scss';
 import Shows from '../../api/slideshows/dashboardData';
 
-
 export default class MainDashboard extends Component {
   constructor(props) {
     super();
@@ -20,6 +19,7 @@ componentDidMount() {
 }
   render() {
     console.log('MainDashboard was rendered');
+
     return(
     <div>
       <HourBar/>

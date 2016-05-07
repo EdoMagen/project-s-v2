@@ -1,6 +1,14 @@
 "use strict";
 
 module.exports = {
+	"user" : {
+		"twitter_enabled" : true,
+		"instagram_enabled" : false,
+		"name" : "John Doe",
+		"email": "johndoe123@gmail.com",
+		"remaining_minutes": 120,
+		"account_type": "premium1" //premium1, premium2, premium3 or free
+	},
 	"shows" : [
 		{
 			"id": "s00000001",

@@ -7,22 +7,36 @@ export default class show extends Component {
     super();
     this.state = {
       isLoading: false,
-      showId: props.params.showId, // taken from the router
+      showId: props.params.showId, // taken from the route
+      currentShow : Show,
+      slides: Show.slides
     };
   }
 
   componentDidMount() {
     $(window).trigger('resize');
     console.log('resize event fired');
-    console.log(Show);
+    console.log(this.state.slides);
   }
+
+  getCurrentSlide() {
+    debugger;
+    this.setState({'currentShow' : Show});
+  }
+
+
 
   render() {
     console.log('Show was rendered');
-    let data = this.state;
+    let currentShow = this.state.currentShow;
+
+    let fname = "Edo";
+    console.log(`My name is ${fname}`);
+
     return(
     <div>
-        welcome to the show page for slide {data.showId}
+        {currentShow.custom_text}
+        welcome to the show page for slide {currentShow.showId}
     </div>
     );
   }
